@@ -18,3 +18,14 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+.city{
+font-size: 20px;
+color: green;
+}
+.capital{
+font-size: 18px;
+color: aqua;
+}
+li{
+  list-style: none;
+}
