@@ -22,7 +22,11 @@ refs.input.addEventListener(
     }
     fetchCountries(valueInput)
       .then(country => searchCountry(country))
-      .catch(error => Notiflix.Notify.failure(error));
+      .catch(error => {
+        refs.div.innerHTML = '';
+        refs.list.innerHTML = '';
+        Notiflix.Notify.failure(error);
+      });
   }, DEBOUNCE_DELAY)
 );
 function searchCountry(city) {
