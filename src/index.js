@@ -20,10 +20,11 @@ refs.input.addEventListener(
     if (!valueInput) {
       refs.list.innerHTML = '';
       refs.div.innerHTML = '';
+      return;
     }
     fetchCountries(valueInput)
       .then(country => searchCountry(country))
-      .catch(error => {
+      .catch(() => {
         refs.div.innerHTML = '';
         refs.list.innerHTML = '';
         Notiflix.Notify.failure('Oops, there is no country with that name');
